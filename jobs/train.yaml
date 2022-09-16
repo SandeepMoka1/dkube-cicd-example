@@ -11,15 +11,15 @@ parameters:
           choice: tensorflow
           details:
             version: 2.0.0
-            image: 'ocdr/dkube-datascience-tf-cpu:v2.0.0-6'
+            image: 'ocdr/dkube-datascience-tf-cpu:v2.0.0-16'
     datums:
       workspace:
         data:
-          name: 'ocdkube:tf-example-0251285494'
+          name: 'ocdkube:mnist'
           version: ''
         script: python mnist/train.py
       datasets:
-        - name: 'ocdkube:mnist'
+        - name: 'ocdkube:mnst'
           mountpath: /mnist
       outputs:
         - name: 'ocdkube:mnist'
